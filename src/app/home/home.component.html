@@ -1,6 +1,6 @@
 <section>
   <!-- <app-filter ></app-filter> -->
-  <div class="w-full">
+  <div class="w-full md:ml-10">
     <div class="px-4 md:px-6 py-6">
       <div
         class="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-8"
@@ -29,7 +29,7 @@
   </div>
   
 </section>
-<section [className]="'grid grid-cols-5 gap-6 p-6'">
+<section class='grid md:grid-cols-1 lg:grid-cols-5 gap-6 p-6'>
     <div *ngFor="let course of courses">
       <app-course-card [course]="course"></app-course-card>
     </div>
