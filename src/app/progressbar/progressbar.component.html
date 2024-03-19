@@ -1,0 +1,27 @@
+
+<div class="p-6 space-y-4">
+  <img
+    src={{course.image}}
+    width="80"
+    height="45"
+    alt="Course Image"
+    class="aspect-[1.8] rounded-lg object-cover"
+  />
+  <div class="grid gap-1.5">
+    <h3 class="text-base font-bold"> {{course.title}}</h3>
+    <p class="text-sm font-medium text-gray-500 dark:text-gray-400">{{course.description}}</p>
+    <section>
+      <div class="max-w-4xl">
+        <div class="flex mb-2 justify-between">
+          <div className="text-sm font-medium text-gray-500"> {{course.progressTopic}}</div>
+          <div className="text-sm font-medium text-gray-500">{{course.progress}}%</div>
+        </div>
+        <div class="w-full bg-gray-200 rounded-full h-2.5 mb-4 dark:bg-gray-300">
+          <div class="bg-black h-2.5 rounded-full" style="width: {{course.progress}}%"></div>
+        </div>
+      </div>
+</section>
+  </div>
+</div>
+
+

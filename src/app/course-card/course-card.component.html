@@ -1,0 +1,42 @@
+<div
+  class="bg-card text-card-foreground shadow-sm w-full max-w-sm rounded-xl border"
+  data-v0-t="card"
+>
+  <div class="aspect-[16/9]">
+    <img
+        [src]="course.image"
+        alt="{{ course.title }}"
+        class="object-cover aspect-[1/1] rounded-t-xl w-full"
+    />
+  </div>
+  <div class="p-6">
+    <div class="grid gap-1.5">
+      <h3 class="text-base font-semibold leading-none">
+        {{ course.title }}
+      </h3>
+      <p class="text-sm text-gray-500">Taught by {{ course.instructor }}</p>
+      <p class="text-sm text-gray-500">{{ course.description }}</p>
+    </div>
+  </div>
+  <div class="items-center flex justify-between px-6 py-2">
+    <div class="flex items-center gap-1 text-sm">
+     <span class="font-medium">Rating: {{ course.rating }} (out of 5)</span>
+    </div>
+    <button
+    (click)="enrollCourse(course)"
+      class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3"
+    >
+      Enroll
+    </button>
+  </div>
+  <div class="items-center flex justify-between px-6 mb-3">
+    <div class="flex items-center gap-1 text-sm">
+      <span class="text-xl font-medium">Price: {{ course.price }}</span>
+     </div>
+     <div>
+    <span class="text-xs font-medium">Category: {{ course.category }}</span>
+
+     </div>
+  </div>
+</div>
+

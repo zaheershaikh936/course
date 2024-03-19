@@ -1,0 +1,36 @@
+<section>
+  <!-- <app-filter ></app-filter> -->
+  <div class="w-full">
+    <div class="px-4 md:px-6 py-6">
+      <div
+        class="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-8"
+      >
+        <div class="md:w-[400px] flex-1">
+          <div class="relative rounded-lg bg-white dark:bg-gray-950">
+            <input
+              class="flex h-12 rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 w-full"
+              placeholder="Search for courses"
+              type="search"
+              [(ngModel)]="searchFilter"
+              (change)="searchCourses()"
+            />
+          </div>
+        </div>
+        <div class="flex-2 w-32">
+          <select (change)="onDropdownChange($event)" id="filter" class="w-full h-12 pl-2 rounded-md bg-transparent border border-input bg-background">
+            <option>Select</option>
+            <option value="price">Price</option>
+            <option value="rating">Rating</option>
+            <option value="category">Category</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</section>
+<section [className]="'grid grid-cols-5 gap-6 p-6'">
+    <div *ngFor="let course of courses">
+      <app-course-card [course]="course"></app-course-card>
+    </div>
+</section>
